@@ -36,8 +36,8 @@ const getRateByUser = async (req, res) => {
 //POST method => add order by user
 const addOrderByUser=async(req,res)=>{
     try {         
-        const{user_id,food_id}=res.params;
-        const{amount}=res.body;
+        const{user_id,food_id}=req.params;
+        const{amount}=req.body;
         let newData={
             user_id,
             food_id,
